@@ -23,9 +23,16 @@ function LessonPageThree({ setLessonPage }: Props) {
 function LessonPageTwo({ setLessonPage }: Props) {
   return (
     <>
-      <label>Email</label>
-      <input type="email"></input>
-      <button onClick={() => setLessonPage(2)}>Next</button>
+      <label htmlFor="email">Email</label>
+      <input type="email" id="email" required></input>
+      <button
+        onClick={(e) => {
+          e.preventDefault();
+          setLessonPage(2);
+        }}
+      >
+        Next
+      </button>
     </>
   );
 }

@@ -19,3 +19,19 @@ section {
 section:nth-child(even) {
   background-color: lightgray;
 } */
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+form input {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0px;
+}
