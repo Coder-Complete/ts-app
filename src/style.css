@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css?family=DM+Sans");
+
+* {
+  font-family: "DM sans", sans serif;
+  margin: 0;
+  border: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+section {
+  padding: 20px;
+}
+/* 
+section:nth-child(even) {
+  background-color: lightgray;
+} */

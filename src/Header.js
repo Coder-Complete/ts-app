@@ -1,14 +1,14 @@
 import React from "react";
-import "./Header.css";
 
 function Header() {
   return (
     <header>
-      <div className="left-section">Amazon</div>
+      <div className="left-section">Logo</div>
       <div className="right-section">
-        <a href="">About</a>
-        <a href="">Blog</a>
-        <a href="">Contact</a>
+        <a href="">What you'll learn</a>
+        <a href="">Pricing</a>
+        <a href="">Student stories</a>
+        <a href="">Talk to us</a>
       </div>
     </header>
   );
