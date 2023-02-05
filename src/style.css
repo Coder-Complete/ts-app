@@ -18,6 +18,8 @@ header {
 
 section {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 /* 
 section:nth-child(even) {
@@ -46,9 +48,15 @@ button {
   border: 1px solid lightgray;
   background-color: var(--blue);
   color: white;
+  align-self: flex-start;
+}
+
+#course {
+  display: flex;
 }
 
 .left-side {
+  border-right: 1px solid lightgray;
 }
 
 .left-side__progress {

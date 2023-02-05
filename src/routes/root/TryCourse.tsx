@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
   
 */
 
-function GetFreeLesson() {
+function TryCourse() {
   return (
     <section>
       <Link to="/course">Try Course</Link>
@@ -14,4 +14,4 @@ function GetFreeLesson() {
   );
 }
 
-export default GetFreeLesson;
+export default TryCourse;

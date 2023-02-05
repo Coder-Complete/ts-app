@@ -1,6 +1,7 @@
 import { GetObjectCommand, GetObjectCommandInput } from "@aws-sdk/client-s3";
 import express, { Request, Response } from "express";
 
+import cors from "cors";
 import dotenv from "dotenv";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import { s3Client } from "./s3Client.js";
@@ -77,13 +78,25 @@ async function getObjectUrl(bucket: String, objectKey: String) {
 const app = express();
 const port = process.env.PORT || 3001;
 
+app.use(cors());
+
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
+
 app.get("/", (req: Request, res: Response) => {
   res.send("Express + TypeScript Server");
 });
 
 app.get("/video", async (req: Request, res: Response) => {
+  console.log("received video request");
   let signedUrl = await getObjectUrl("codercomplete", "1-setup-zoom.mp4");
-  res.send(signedUrl);
+  res.send(JSON.stringify(signedUrl));
 });
 
 app.get("/api", (req: Request, res: Response) => {

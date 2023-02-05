@@ -6,18 +6,19 @@ import * as ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import App from "./routes/root/App";
-import Contact from "./routes/course/Course";
+import Course from "./routes/course/Course";
 import ErrorPage from "./routes/error/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Course />,
+    // element: <App />,
     errorElement: <ErrorPage />,
   },
   {
     path: "course",
-    element: <Contact />,
+    element: <Course />,
     errorElement: <ErrorPage />,
   },
 ]);
