@@ -1,9 +1,12 @@
-const HTMLWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+import * as url from "url";
 
-const path = require("path");
+import HTMLWebpackPlugin from "html-webpack-plugin";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import path from "path";
 
-module.exports = {
+const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
+
+export default {
   // entry: path.resolve(__dirname, "src", "index.js"),
   entry: "./src/index.tsx",
   output: {
@@ -48,6 +51,18 @@ module.exports = {
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(gif|png|avif|jpe?g)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "assets/",
+            },
+          },
+        ],
       },
     ],
   },

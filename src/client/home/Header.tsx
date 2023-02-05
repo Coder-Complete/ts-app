@@ -3,7 +3,9 @@
 function Header() {
   return (
     <header>
-      <div className="left-section">Logo</div>
+      <div className="left-section">
+        <img src="assets/full-logo.png" alt="" />
+      </div>
       <div className="right-section">
         <a href="">What you'll learn</a>
         <a href="">Pricing</a>
