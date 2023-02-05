@@ -1,3 +1,4 @@
+import AddVidToS3 from "./AddVidToS3";
 import Contact from "./Contact";
 import GetFreeLesson from "./GetFreeLesson";
 // import GetStartedCourse from "./GetStartedCourse";
@@ -12,6 +13,7 @@ export default function App() {
       <Header></Header>
       <GetFreeLesson></GetFreeLesson>
       <TryCourse></TryCourse>
+      <AddVidToS3></AddVidToS3>
       {/* <GetStartedCourse></GetStartedCourse>
       <GetStartedFull></GetStartedFull> */}
       <Contact></Contact>

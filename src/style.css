@@ -6,6 +6,10 @@
   border: 0;
 }
 
+body {
+  --blue: #2295fa;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -34,4 +38,21 @@ form input {
   border-radius: 5px;
   padding: 10px;
   margin: 10px 0px;
+}
+
+button {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid lightgray;
+  background-color: var(--blue);
+  color: white;
+}
+
+.left-side {
+}
+
+.left-side__progress {
+}
+
+.left-side__section {
 }
